@@ -1,0 +1,60 @@
+.stat{
+    text-align: center;
+    width: 150px;
+    border: solid #000 1px;
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+}
+.stat p span{
+    font-weight: bold;
+}
+.firstform{
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    text-align: center;
+}
+input{
+    text-align: center;
+    border: 0;
+    border-bottom: solid #000 1px;
+    width: 100px;
+    background-color: #ffff;
+}
+table{
+    text-align: center;
+}
+.firstth{
+    width: 100px;
+}
+.icon{
+    width: 30px;
+}
+label{
+    font-size: medium;
+    color: gray;       
+}
+
+@media screen and (max-width:800px) {
+    .stat{
+        margin-top: 40px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    table{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .firstform{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: center;
+    }
+    input{
+        width: 25px;
+    }
+
+}

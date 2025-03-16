@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kredit kalkulátor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="firstform">
+        <label for="credits">Kredit:</label>
+        <select id="credits">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+        <label for="grade">Jegy:</label>
+        <select id="grade">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        <br><br>
+        <img src="add.png" class="icon" onclick="addSubject()">
+    </div>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th colspan="2">Felvett tárgyaid</th>
+        </tr>
+        <tr>
+            <th class="firstth"></th>
+            <th class="firstth"></th>
+        </tr>
+    </table>
+    <table id="subjectTable">
+        <tr>
+            <th class="firstth">Kredit</th>
+            <th class="firstth">Jegy</th>
+        </tr>
+    </table>
+
+    <div class="stat">
+    <p style="font-weight: bold;">Eredmények</p>
+    <p>Átlag:<br><span id="averageGrade">0.00</span></p>
+    <p>Felvett tárgyak:<br><span id="totalSubjects">0</span></p>
+    <p>Felvett kreditek:<br><span id="totalCredits">0</span></p>
+    <p>Teljesített kreditek:<br><span id="totalGradeCredits">0</span></p>
+    </div>
+</body>
+</html>

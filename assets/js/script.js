@@ -56,15 +56,11 @@ function atlagszamol() {
     var jNum = parseInt(jStr, 10);
 
     if (!isFinite(kNum) || kNum <= 0) continue;
+    if (!isFinite(jNum) || jNum < 2) continue;
 
-    if (jNum >= 1 && jNum <= 5) {
-      felvettKred += kNum;
-
-      if (jNum >= 2) {
-        teljesitettKred += kNum;
-        sulyozott += kNum * jNum;
-      }
-    }
+    felvettKred += kNum;
+    teljesitettKred += kNum;
+    sulyozott += kNum * jNum;
   }
 
   document.getElementById("output3").innerHTML = felvettKred;

@@ -16,10 +16,9 @@ body {
   color: #b30000;
   border-radius: 8px;
   padding: 10px;
-  margin-bottom: 1rem;
-  font-size: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
 }
-
 .navbar-brand img{
   width: 150px;
   height: auto;

@@ -8,8 +8,8 @@ function drawtable(uj) {
 
     ujsor.innerHTML =
       "<td style='text-align:center'>" + uj + "</td>" +
-      "<td><input class='form-control text-center' id='" + uj + "k' type='text' style='text-align:center' onChange='drawtable(" + (uj + 1) + ")' maxlength='2' placeholder='Kredit'/></td>" +
-      "<td><input class='form-control text-center' id='" + uj + "j' style='text-align:center' type='text' onChange='drawtable(" + (uj + 1) + ")' maxlength='1' placeholder='Jegy'></td>";
+      "<td><input class='form-control text-center' id='" + uj + "k' type='number' style='text-align:center' onChange='drawtable(" + (uj + 1) + ")' maxlength='2' placeholder='Kredit'/></td>" +
+      "<td><input class='form-control text-center' id='" + uj + "j' style='text-align:center' type='number' onChange='drawtable(" + (uj + 1) + ")' maxlength='1' placeholder='Jegy'></td>";
 
     div.appendChild(ujsor);
   }

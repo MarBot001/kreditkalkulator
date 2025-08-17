@@ -1,13 +1,29 @@
-<p align="center">
-    <a href="https://webnation.hu/" target="_blank">
-        <img src="https://webnation.hu/img/logo.png" width="500px" height="auto">
-    </a>
-    <h1 align="center">Kredit kalkulátor egyetemistáknak</h1>
-    <br>
-</p>
+# Kredit kalkulátor egyetemistáknak
 
-<b>Kredit kalkulátor by.&nbsp;&nbsp;<a href="https://webnation.hu/"><img src="https://webnation.hu/img/logo.png" width="100px" heigth="auto"></a></b><br><br>
-Nagyon egyszerű HTML alapokon fekvő Javascript kód teszi lehetővé a bevitt tárgyak érdemjegye és kreditszáma alapján a hallgató kredit alapú átlagának kiszámítását.<br>
-Ezen kalkulátor napi szintű éles használatban van az alábbi oldalon:<br>https://h5.nye.hu/kreditkalkulator/
-<br><br>
-"Egyéni igényekre, egyéni lehetőségek!" - <a href="https://webnation.hu/"><img src="https://webnation.hu/img/logo.png" width="100px" heigth="auto"></a>
+## Rövid leírás
+A kredit kalkulátor egy egyszerű, mobilbarát webes alkalmazás, amellyel gyorsan kiszámíthatod a tárgyaid kredit alapú átlagát, a felvett és teljesített krediteket. A kalkulátor automatikusan frissíti az eredményeket, ahogy új tárgyakat adsz hozzá vagy módosítasz.
+
+## Fő funkciók
+- Tárgyak hozzáadása, kredit és érdemjegy megadása
+- Automatikus sor hozzáadás/törlés
+- Felvett, teljesített kreditek és átlag számítása
+- Hibás adat esetén figyelmeztetés
+- Modern, reszponzív Bootstrap dizájn
+
+## Használat
+1. Add meg a tárgyak kredit értékét és érdemjegyét a táblázatban.
+2. Az eredmények (átlag, felvett/ teljesített kreditek, tárgyak száma) automatikusan frissülnek.
+3. Hibás érdemjegy esetén piros figyelmeztetést kapsz.
+
+## Technológiák
+- HTML5
+- CSS3 (Bootstrap 5, saját stílusok)
+- JavaScript
+
+## Telepítés / futtatás
+1. Másold a projektet egy tetszőleges webes mappába (pl. `c:/wamp64/www/kreditkalkulator`).
+2. Nyisd meg böngészőben az `index.html`-t.
+3. Használat közben nincs szükség szerveroldali kódra.
+
+## Élesben itt működik
+https://h5.nye.hu/kreditkalkulator/

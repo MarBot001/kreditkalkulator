@@ -1,67 +1,90 @@
+
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="author" content="sarkozi.adam@sth.sze.hu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kredit kalkulátor</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>Átlagszámoló</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <div class="firstform">
-        <label for="credits">Kredit:</label>
-        <select id="credits">
-            <option value=""></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
 
-        <label for="grade">Jegy:</label>
-        <select id="grade">
-            <option value=""></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        <br><br>
-        <img src="add.png" class="icon" onclick="addSubject()">
-    </div>
-    <br>
-    <br>
-    <table>
-        <tr>
-            <th colspan="2">Felvett tárgyaid</th>
-        </tr>
-        <tr>
-            <th class="firstth"></th>
-            <th class="firstth"></th>
-        </tr>
-    </table>
-    <table id="subjectTable">
-        <tr>
-            <th class="firstth">Kredit</th>
-            <th class="firstth">Jegy</th>
-        </tr>
-    </table>
+<body onload='document.getElementById("hibadiv").style.display="none";'>
 
-    <div class="stat">
-    <p style="font-weight: bold;">Eredmények</p>
-    <p>Átlag:<br><span id="averageGrade">0.00</span></p>
-    <p>Felvett tárgyak:<br><span id="totalSubjects">0</span></p>
-    <p>Felvett kreditek:<br><span id="totalCredits">0</span></p>
-    <p>Teljesített kreditek:<br><span id="totalGradeCredits">0</span></p>
+<div class="container mb-4 mt-3">
+    <div class="card border-info">
+        <div class="card-header bg-info text-white">
+            <i class="bi bi-lightbulb"></i> Kredit kalkulátor használata
+        </div>
+        <div class="card-body">
+            <p class="mb-0">
+                A kredit kalkulátor segítségével könnyen kiszámíthatod a tárgyaid átlagát és a teljesített krediteket. A tárgyakat a táblázatban adhatod hozzá, ahol megadhatod a kredit értékét és az érdemjegyet. Az eredmények automatikusan frissülnek, ahogy új tárgyakat adsz hozzá vagy módosítasz meglévőket.
+            </p>
+        </div>
     </div>
+</div>
+
+    <div class="container">
+        <div id="hibadiv" class="error" style="display:none;"></div>
+        <div class="row">
+            <div class="col-lg-8 col-12 mb-3">
+                <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                        <i class="bi bi-journal-plus"></i> Tárgyak hozzáadása
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Kredit</th>
+                                        <th>Érdemjegy</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla">
+                                    <tr id="1">
+                                        <td style="text-align:center">1</td>
+                                        <td><input class="form-control text-center" id="1k" type="text" onChange='drawtable(2)' maxlength="2" placeholder="Kredit"></td>
+                                        <td><input class="form-control text-center" id="1j" type="text" onChange='drawtable(2)' maxlength="1" placeholder="Jegy"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 mb-3">
+                <div class="card sticky-top" style="top: 80px;">
+                    <div class="card-header bg-success text-white"><i class="bi bi-bar-chart"></i> Eredmények</div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Átlag:
+                                <span id="output1" class="fw-bold"></span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Felvett tárgyak:
+                                <span id="output7" class="fw-bold"></span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Felvett Kredit:
+                                <span id="output3" class="fw-bold"></span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Teljesített Kredit:
+                                <span id="output5" class="fw-bold"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+body {
+  background: url("https://h5.nye.hu/wp-content/uploads/2017/09/body-bg.gif") no-repeat center center fixed;
+  background-size: cover;
+}
+.card {
+  margin-bottom: 1rem;
+}
+.input-group-text {
+  min-width: 90px;
+}
+.table-responsive {
+  margin-bottom: 1rem;
+}
+.error {
+  background: #ffdddd;
+  color: #b30000;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+.navbar-brand img{
+  width: 150px;
+  height: auto;
+}
